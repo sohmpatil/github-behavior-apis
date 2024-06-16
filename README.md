@@ -1,12 +1,12 @@
 ## Detection of Ideal Behaviors with Low Impact in Github Repositories
 
 
-Sometimes in order to ensure that all team members are contributing effectively, managers will place goals or expectations on Git participation on a sprint by sprint basis. However, 
+Sometimes in order to ensure that all team members are contributing effectively, managers will place goals or expectations on Git participation on a sprint-by-sprint basis. However, 
 bad actors will search for ways to meet these objectives without actually performing any work. These people will have ideal metrics, but little or no actual impact on the contents
-of the repository. Such behavior is difficult for a manager to detect, and can take a lot of time to investigate. This project aims to create a prototype of a system
-which can automatically scan a repository for such behavior and raise an alert for the manager to investigate.
+of the repository. Such behavior is difficult for a manager to detect and can take a lot of time to investigate. This project aims to create a prototype of a system
+that can automatically scan a repository for such behavior and raise an alert for the manager to investigate.
 
-## How to install Librararies:
+## How to install Libraries:
 ```
 pip install -r requirements.txt
 ```
@@ -19,19 +19,19 @@ OR
 ```
 python -m uvicorn main:app --reload
 ```
-## How to run in docker container
-- To build image
+## How to run in the docker container
+- To build an image
 ```
 make build
 ```
-- To build and image and run
+- To build an image and run
 ```
 make container
 ```
   OR
 ```
-docker build -t github-ideal-behavior:latest .
-docker run -p 8080:8080 github-ideal-behavior:latest
+docker build -t github-behavior-apis:latest .
+docker run -p 8080:8080 github-behavior-apis:latest
 ```
 
 ## How to use API
@@ -73,7 +73,7 @@ curl -X 'POST' \
 ```
 
 ## How to run tests
-In the project root directory run following command
+In the project root directory run the following command
 ```
 python -m pytest tests/
 ```
